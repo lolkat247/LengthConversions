@@ -74,5 +74,23 @@ namespace Conversions
             lblFromLength.Text = conversionTable[Array.IndexOf(conversionTable, cboConversions.Text) + 1] + ":";
             lblToLength.Text = conversionTable[Array.IndexOf(conversionTable, cboConversions.Text) + 2] + ":";
         }
+
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                lblCalculatedLength.Text = Convert.ToString(
+                Convert.ToDecimal(txtLength.Text) *
+                Convert.ToDecimal(
+                    conversionTable[Array.IndexOf(conversionTable, cboConversions.Text) + 3]
+                    )
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Invalid input", "Error");
+                return;
+            }
+        }
     }
 }

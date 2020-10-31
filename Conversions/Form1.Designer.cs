@@ -90,6 +90,7 @@ namespace Conversions
             this.btnCalculate.Size = new System.Drawing.Size(80, 23);
             this.btnCalculate.TabIndex = 26;
             this.btnCalculate.Text = "&Calculate";
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // cboConversions
             // 
